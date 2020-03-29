@@ -38,8 +38,7 @@ public class FoodTruck {
 
 	public void setFoodType(String foodType) {
 		this.foodType = foodType;
-	}                                                    //each trucks setters and getters
-	                                               //with the toString of whole Data and display of each
+	}                                                    
 	public double getTruckRating() {
 		return truckRating;
 	}
@@ -62,8 +61,8 @@ public class FoodTruck {
 
 	
 	public String toString() {
-		return "FoodTruck [truck name:" + truckName + ", truck id:" + uniqueTruckId
-				           + ", foodType:" + foodType + ", truckRating:" + truckRating + "]";
+		return "FoodTruck [ truck id: " + uniqueTruckId + ", truck name: " + truckName + 
+				           ", food type: " + foodType + ", truck rating: " + truckRating + "]";
 		
 	}
 	

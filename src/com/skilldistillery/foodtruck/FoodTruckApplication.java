@@ -20,24 +20,27 @@ public class FoodTruckApplication {
 
 	public void createTruck() {
 		for (numTrucks = 0; numTrucks < allTrucks.length; numTrucks++) {
-			System.out.println("Truck name:");
-			String truckName = sc.next();
+			System.out.println("Truck name: ");
+			String truckName = sc.nextLine();
+			
 			if (!truckName.equalsIgnoreCase("quit")) {
-
-				System.out.println("Food type:");
+				
+				System.out.println("Food type: ");
 				String foodType = sc.next();
 
-				System.out.println("Truck rating:");
+				System.out.println("Truck rating: ");
 				double truckRating = sc.nextDouble();
+				sc.nextLine();
 
 				FoodTruck truckByUser = new FoodTruck(truckName, foodType, truckRating);
 
 				allTrucks[numTrucks] = truckByUser;
 			}
-
-			if (truckName.equalsIgnoreCase("quit")) {
-				break; 
+			
+			else {
+				break;
 			}
+
 		}
 	
 		optionMenu();
@@ -84,7 +87,7 @@ public class FoodTruckApplication {
 			}
 	}
 		average = sum/i;
-		System.out.println("Average rating of food trucks" + average);
+		System.out.println("The average rating of food trucks entered is: " + average);
 	}
 	
 	
@@ -98,7 +101,7 @@ public class FoodTruckApplication {
 				compare = allTrucks[i];
 			}
 		}
-		System.out.println("Highest rated: " + compare.toString());
+		System.out.println("The highest rated food truck entered is: " + compare.toString());
 	}
 
 
