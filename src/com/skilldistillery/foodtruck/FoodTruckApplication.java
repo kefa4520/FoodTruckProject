@@ -11,7 +11,8 @@ public class FoodTruckApplication {
 
 	public static void main(String[] args) {
 
-		System.out.println("Welcome to the Food Truck App. Please fill in all the data for each truck: ");
+		System.out.println("Welcome to the Food Truck App. Please fill in all the data for each truck. ");
+		System.out.println("Data for up to five trucks can be entered.");
 		FoodTruckApplication fleet = new FoodTruckApplication();
 
 		fleet.createTruck();
@@ -20,7 +21,7 @@ public class FoodTruckApplication {
 
 	public void createTruck() {
 		for (numTrucks = 0; numTrucks < allTrucks.length; numTrucks++) {
-			System.out.println("Truck name: ");
+			System.out.println("Enter truck name to fill in the data or quit to continue with the program: ");
 			String truckName = sc.nextLine();
 			
 			if (!truckName.equalsIgnoreCase("quit")) {
@@ -28,14 +29,14 @@ public class FoodTruckApplication {
 				System.out.println("Food type: ");
 				String foodType = sc.next();
 
-				System.out.println("Truck rating: ");
+				System.out.println("Truck rating on the scale of 1-5: ");
 				double truckRating = sc.nextDouble();
 				sc.nextLine();
 
 				FoodTruck truckByUser = new FoodTruck(truckName, foodType, truckRating);
 
 				allTrucks[numTrucks] = truckByUser;
-			}
+	     }
 			
 			else {
 				break;
@@ -51,7 +52,7 @@ public class FoodTruckApplication {
 		System.out.println("1. List all existing food trucks.");
 		System.out.println("2. See the average rating of food trucks.");
 		System.out.println("3. Display the highest-rated food truck.");
-		System.out.println("4. Quit the program.");
+		System.out.println("4. Quit the program. \n");
 		String userChoice = sc.next();
 		while (!userChoice.equals("4")) {
 
