@@ -98,19 +98,9 @@ public class FoodTruckApplication {
 				compare = allTrucks[i];
 			}
 		}
-		System.out.println("Highest rated: " + compare.toString() + max);
+		System.out.println("Highest rated: " + compare.toString());
 	}
 
-	// used to create and initialize an Array
-
-	// FoodTruckApplication = ParkingLot
-//	public FoodTruckApplication() {
-//		allTrucks = new FoodTruck[maxTrucks];         //constructor to create an array of trucks
-//	}
-//	public FoodTruck[] getTrucks() {
-//		allTrucks = new FoodTruck[maxTrucks];
-//		return allTrucks;
-//	}
 
 	public void displayTrucks() {
 		for (FoodTruck truck : allTrucks)
@@ -118,12 +108,4 @@ public class FoodTruckApplication {
 				System.out.println(truck.toString());
 	}
 
-//	public void addTrucks (FoodTruck newTruck) {
-//		if (numTrucks == maxTrucks) {
-//			return;
-//		}
-//		if (numTrucks < maxTrucks) {  //for loop?
-//			numTrucks++;
-//			return;
-//		}
 }
